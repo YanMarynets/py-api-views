@@ -28,30 +28,30 @@ cinema_hall_detail = CinemaHallViewSet.as_view(
 router = routers.DefaultRouter()
 router.register("movies", MovieViewSet)
 urlpatterns = [
-    path("genre/",
+    path("genres/",
          GenreList.as_view(),
          name="genre-list"
          ),
-    path("genre/<int:pk>",
+    path("genres/<int:pk>",
          GenreDetail.as_view(),
          name="genre-detail"
          ),
     path(
-        "actor/",
+        "actors/",
         ActorList.as_view(),
         name="actor-list"
     ),
-    path("actor/<int:pk>",
+    path("actors/<int:pk>",
          ActorDetail.as_view(),
          name="actor-detail"
          ),
     path(
-        "cinema-hall/",
+        "cinema-halls/",
         cinema_hall_list,
         name="cinema-hall-list"
     ),
     path(
-        "cinema-hall/<int:pk>",
+        "cinema-halls/<int:pk>",
         cinema_hall_detail,
         name="cinema-hall-detail"
     ),
